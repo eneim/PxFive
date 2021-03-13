@@ -11,8 +11,7 @@ Building the beautiful garden design guide application using Jetpack Compose.
 
 ## :bulb: Motivation and Context
 This is one of the most complex Compose App I have ever played with. It is a lot of fun. I realize that
-some of the spec in the Bloom.pdf doesn't match correctly. For example the font suppose to be serif
-but finally we use sans. And the "Beautiful home garden solutions" is said to have 32dp from its
+some of the spec in the Bloom.pdf doesn't match correctly. For example the the "Beautiful home garden solutions" is said to have 32dp from its
 baseline to top, but due to the keylines, it is 24dp.
 
 So tuning the result to meet the expectation is something takes the most of my time, which is also
