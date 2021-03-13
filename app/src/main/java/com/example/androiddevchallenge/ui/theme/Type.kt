@@ -24,43 +24,43 @@ import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.R
 
 private val Nunito = FontFamily(
-  Font(R.font.nunito_sans_bold, weight = FontWeight.Bold),
-  Font(R.font.nunito_sans_light, weight = FontWeight.Light),
-  Font(R.font.nunito_sans_semibold, weight = FontWeight.SemiBold)
+    Font(R.font.nunito_sans_bold, weight = FontWeight.Bold),
+    Font(R.font.nunito_sans_light, weight = FontWeight.Light),
+    Font(R.font.nunito_sans_semibold, weight = FontWeight.SemiBold)
 )
 
 // Set of Material typography styles to start with
 val typography = Typography(
-  h1 = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.Bold,
-    fontSize = 18.sp,
-  ),
-  h2 = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.Bold,
-    fontSize = 14.sp,
-    letterSpacing = 0.15.sp,
-  ),
-  body1 = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.Light,
-    fontSize = 14.sp,
-  ),
-  body2 = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.Light,
-    fontSize = 12.sp,
-  ),
-  button = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.SemiBold,
-    fontSize = 14.sp,
-    letterSpacing = 1.sp,
-  ),
-  caption = TextStyle(
-    fontFamily = Nunito,
-    fontWeight = FontWeight.SemiBold,
-    fontSize = 12.sp,
-  )
+    h1 = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
+    ),
+    h2 = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 0.15.sp,
+    ),
+    body1 = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.Light,
+        fontSize = 14.sp,
+    ),
+    body2 = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.Light,
+        fontSize = 12.sp,
+    ),
+    button = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 14.sp,
+        letterSpacing = 1.sp,
+    ),
+    caption = TextStyle(
+        fontFamily = Nunito,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 12.sp,
+    )
 )

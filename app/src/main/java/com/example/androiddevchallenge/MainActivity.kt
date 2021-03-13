@@ -15,7 +15,6 @@
  */
 package com.example.androiddevchallenge
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -36,54 +35,54 @@ import com.example.androiddevchallenge.ui.theme.MyTheme
 import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
 
 class MainActivity : AppCompatActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    WindowCompat.setDecorFitsSystemWindows(window, false)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
-    setContent {
-      MyTheme {
-        ProvideWindowInsets {
-          MyApp()
+        setContent {
+            MyTheme {
+                ProvideWindowInsets {
+                    MyApp()
+                }
+            }
         }
-      }
     }
-  }
 }
 
 // Start building your app here!
 @Composable
 fun MyApp() {
-  val navController = rememberNavController()
-  Surface(
-    modifier = Modifier.fillMaxSize(),
-    color = MaterialTheme.colors.background
-  ) {
-    NavHost(navController, startDestination = "welcome") {
-      composable("welcome") {
-        WelcomeScreen(navController = navController)
-      }
-      composable("login") {
-        LoginScreen(navController = navController)
-      }
-      composable("home") {
-        HomeScreen()
-      }
+    val navController = rememberNavController()
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background
+    ) {
+        NavHost(navController, startDestination = "welcome") {
+            composable("welcome") {
+                WelcomeScreen(navController = navController)
+            }
+            composable("login") {
+                LoginScreen(navController = navController)
+            }
+            composable("home") {
+                HomeScreen()
+            }
+        }
     }
-  }
 }
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
-  MyTheme {
-    MyApp()
-  }
+    MyTheme {
+        MyApp()
+    }
 }
 
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DarkPreview() {
-  MyTheme(darkTheme = true) {
-    MyApp()
-  }
+    MyTheme(darkTheme = true) {
+        MyApp()
+    }
 }
