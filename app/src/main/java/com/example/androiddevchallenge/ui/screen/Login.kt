@@ -27,12 +27,15 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -68,17 +71,19 @@ fun LoginScreen(navController: NavController) {
             value = email,
             onValueChange = { email = it },
             textStyle = MaterialTheme.typography.body1,
-            placeholder = {
+            label = {
                 Text(
                     text = "Email address",
                     style = MaterialTheme.typography.body1,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxHeight()
                 )
             },
             singleLine = true,
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor = MaterialTheme.colors.secondary,
+                focusedLabelColor = MaterialTheme.colors.secondary
+            ),
             modifier = Modifier
-                .height(60.dp)
+                .height(56.dp)
                 .fillMaxWidth()
         )
 
@@ -89,16 +94,20 @@ fun LoginScreen(navController: NavController) {
             value = password,
             onValueChange = { password = it },
             textStyle = MaterialTheme.typography.body1,
-            placeholder = {
+            label = {
                 Text(
                     text = "Password (8+ characters)",
                     style = MaterialTheme.typography.body1,
                 )
             },
             singleLine = true,
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor = MaterialTheme.colors.secondary,
+                focusedLabelColor = MaterialTheme.colors.secondary
+            ),
             visualTransformation = PasswordVisualTransformation(mask = '\u2022'),
             modifier = Modifier
-                .height(60.dp)
+                .height(56.dp)
                 .fillMaxWidth()
         )
 

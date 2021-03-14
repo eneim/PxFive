@@ -121,7 +121,8 @@ fun WelcomeScreen(navController: NavController) {
                     contentColor = MaterialTheme.colors.secondary
                 ),
                 modifier = Modifier
-                    .firstBaselineToTop(32.dp)
+                    .height(48.dp)
+                    .padding(horizontal = 16.dp)
                     .fillMaxWidth(),
             ) {
                 Text(text = "Log in")

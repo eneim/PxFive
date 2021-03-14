@@ -45,6 +45,7 @@ import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons.Filled
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.FavoriteBorder
@@ -121,12 +122,8 @@ fun HomeScreen() {
                 OutlinedTextField(
                     value = keyword,
                     onValueChange = { keyword = it },
-                    modifier = horizontalPadding
-                        .padding(top = (40.dp - padding.calculateTopPadding()).coerceAtLeast(0.dp))
-                        .fillMaxWidth()
-                        .height(56.dp),
                     textStyle = MaterialTheme.typography.body1,
-                    placeholder = {
+                    label = {
                         Text(
                             text = "Search",
                             style = MaterialTheme.typography.body1
@@ -139,7 +136,15 @@ fun HomeScreen() {
                             modifier = Modifier.size(18.dp)
                         )
                     },
-                    singleLine = true
+                    singleLine = true,
+                    colors = TextFieldDefaults.outlinedTextFieldColors(
+                        focusedBorderColor = MaterialTheme.colors.secondary,
+                        focusedLabelColor = MaterialTheme.colors.secondary
+                    ),
+                    modifier = horizontalPadding
+                        .padding(top = (40.dp - padding.calculateTopPadding()).coerceAtLeast(0.dp))
+                        .fillMaxWidth()
+                        .height(56.dp),
                 )
             }
 
